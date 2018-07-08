@@ -15,3 +15,4 @@ Requirements :
 1. FPWIN Pro to download program to PLC
 2. Python 2.7
 
+You can also check the data from PLC using OPC Server by selecting "Aromat Serial" driver for FP series.
