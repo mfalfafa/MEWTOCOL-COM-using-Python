@@ -1,0 +1,25 @@
+*** Read Contact Area (Single Point) ***
+Command :
+%01#RCS + "contact_code" + "contact_number" + BCC + CR
+- contact_code : R (internal relay)
+				 X (external input)
+				 Y (external output)
+- contact_number: 4 characters (0000)
+- BCC : **
+
+Response (success) :
+%01$RC + "contact_data" + BCC + RC
+-contact_data : 0/1
+
+*** Read Data Area ***
+Command :
+%01#RD + "data_code" + "starting_word_no" + "ending_word_no" + BCC + CR
+- data_code 		: D (data register DT)
+- starting_word_no 	: 5 characters (00000)
+- ending_word_no 	: 5 characters (00000)
+- BCC				: **
+
+Response (success) :
+%01$RD + "first_reg_contents" + "last_reg_contents" + BCC + CR
+- first_reg_contents 	: 4 characters (X16_1,X16_0,X16_3,X16_2)
+- last_reg_contents 	: 4 characters (X16_1,X16_0,X16_3,X16_2)
